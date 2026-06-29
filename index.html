@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   --accent-a:    #ff2d7e;
   --accent-b:    #22d3ee;
 
-  --blur:        7px;
+  --blur:        2px;
   --darken:      .5;
 }
 
@@ -121,9 +121,14 @@ body{
   opacity:0; transform:translateY(14px) scale(.96);
   animation:rise .7s cubic-bezier(.2,.7,.2,1) .05s forwards;
 }
-.avatar img{
-  width:100%; height:100%; border-radius:50%; object-fit:cover; display:block;
+.avatar-inner{
+  width:100%; height:100%; border-radius:50%; overflow:hidden;
   background:#1a1a22;
+}
+.avatar img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  object-position:center 93%;
+  transform:scale(1.28);
 }
 
 .name{
@@ -217,8 +222,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main class="wrap">
 
   <div class="avatar">
-    <img src="avatar.JPG" alt="kotik.life"
-         onerror="this.style.background='linear-gradient(135deg,#ff2d7e,#22d3ee)';this.removeAttribute('src');">
+    <div class="avatar-inner">
+      <img src="avatar.JPG" alt="kotik.life"
+           onerror="this.parentNode.style.background='linear-gradient(135deg,#ff2d7e,#22d3ee)';this.removeAttribute('src');">
+    </div>
   </div>
 
   <h1 class="name">kotik.life</h1>
@@ -227,13 +234,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="links">
 
-    <a class="link" style="--i:0" href="https://www.instagram.com/nar_kotik.taxi" target="_blank" rel="noopener">
+    <a class="link" style="--i:0" href="https://www.instagram.com/nar_kotik.5" target="_blank" rel="noopener">
       <span class="ico ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
       <span class="label">Instagram</span>
       <span class="arrow">→</span>
     </a>
 
-    <a class="link" style="--i:1" href="https://www.instagram.com/nar_kotik.5" target="_blank" rel="noopener">
+    <a class="link" style="--i:1" href="https://www.instagram.com/nar_kotik.taxi" target="_blank" rel="noopener">
       <span class="ico ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
       <span class="label">Instagram (резерв)</span>
       <span class="arrow">→</span>
